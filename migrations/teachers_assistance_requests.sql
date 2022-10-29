@@ -18,4 +18,3 @@ CREATE TABLE assistance_requests (
   teacher_feedback TEXT
 );
 
-
