@@ -9,7 +9,7 @@ CREATE TABLE teachers (
 CREATE TABLE assistance_requests (
   id SERIAL PRIMARY KEY NOT NULL,
   student_id INTEGER REFERENCES students(ID) ON DELETE CASCADE,
-  teachers_id INTEGER REFERENCES teachers(ID) ON DELETE CASCADE,
+  teacher_id INTEGER REFERENCES teachers(ID) ON DELETE CASCADE,
   assignment_id INTEGER REFERENCES assignments(ID) ON DELETE CASCADE,
   created_at TIMESTAMP,
   started_at TIMESTAMP,
@@ -17,4 +17,5 @@ CREATE TABLE assistance_requests (
   student_feedback TEXT,
   teacher_feedback TEXT
 );
+
 
