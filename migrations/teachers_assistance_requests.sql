@@ -6,7 +6,7 @@ CREATE TABLE teachers (
   is_active BOOLEAN DEFAULT TRUE
 );
 
-CREATE TABLE assistance_request (
+CREATE TABLE assistance_requests (
   id SERIAL PRIMARY KEY NOT NULL,
   student_id INTEGER REFERENCES students(ID) ON DELETE CASCADE,
   teachers_id INTEGER REFERENCES teachers(ID) ON DELETE CASCADE,
@@ -17,3 +17,4 @@ CREATE TABLE assistance_request (
   student_feedback TEXT,
   teacher_feedback TEXT
 );
+
